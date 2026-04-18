@@ -1,0 +1,18 @@
+.diff-box {
+    min-height: 280px;
+    white-space: normal;
+    line-height: 1.55;
+    font-size: 0.95rem;
+}
+
+.added {
+    background-color: #c6f6d5;
+}
+
+.removed {
+    background-color: #fed7d7;
+}
+
+.changed {
+    background-color: #faf089;
+}
