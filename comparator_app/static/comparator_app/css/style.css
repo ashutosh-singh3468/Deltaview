@@ -1,18 +1,170 @@
-.diff-box {
-    min-height: 280px;
-    white-space: normal;
-    line-height: 1.55;
+:root {
+    --bg: #f4f7fb;
+    --card: #ffffff;
+    --line: #dbe3ef;
+    --text: #162031;
+    --muted: #5f6b7b;
+    --primary: #3657ff;
+}
+
+body {
+    background: linear-gradient(180deg, #eef3ff 0%, var(--bg) 45%, #f7f9fc 100%);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+.app-shell {
+    max-width: 1050px;
+}
+
+.hero-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 1.6rem;
+    box-shadow: 0 10px 30px rgba(20, 33, 66, 0.06);
+}
+
+.hero-eyebrow {
+    color: var(--primary);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.hero-subtitle {
+    color: var(--muted);
+}
+
+.app-card {
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(20, 33, 66, 0.05);
+}
+
+.section-title {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.field-label {
+    font-weight: 600;
+}
+
+input[type="file"] {
+    width: 100%;
+    background: #f8faff;
+    border: 1px dashed #b6c4dc;
+    border-radius: 12px;
+    padding: 0.65rem;
+}
+
+input[type="file"]::file-selector-button {
+    border: 0;
+    border-radius: 8px;
+    background-color: #e5ebff;
+    color: #1c3470;
+    font-weight: 600;
+    padding: 0.45rem 0.75rem;
+    margin-right: 0.75rem;
+}
+
+.help-text {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.similarity-card {
+    background: #1f2d4d;
+    color: #f4f6fb;
+    border-radius: 14px;
+    padding: 1rem 1.2rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.similarity-label {
+    opacity: 0.85;
     font-size: 0.95rem;
+}
+
+.similarity-value {
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.stats-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.stats-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.stats-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid #edf2fb;
+}
+
+.stats-list li:last-child {
+    border-bottom: 0;
+}
+
+.stats-list span {
+    color: var(--muted);
+}
+
+.diff-card .card-header {
+    background: #f7f9ff;
+    font-weight: 600;
+    border-bottom: 1px solid var(--line);
+}
+
+.diff-box {
+    min-height: 300px;
+    white-space: normal;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.legend {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.legend-label {
+    margin-right: 0.4rem;
 }
 
 .added {
     background-color: #c6f6d5;
+    border-radius: 6px;
 }
 
 .removed {
     background-color: #fed7d7;
+    border-radius: 6px;
 }
 
 .changed {
     background-color: #faf089;
+    border-radius: 6px;
 }
