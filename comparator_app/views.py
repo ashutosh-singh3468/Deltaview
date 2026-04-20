@@ -6,7 +6,7 @@ from .utils import build_diff, extract_text, similarity_percent, text_stats
 
 
 def compare_documents(request):
-    context = {'form': DocumentCompareForm()}
+    context = {'form': DocumentCompareForm(), 'comparison_done': False}
 
     if request.method == 'POST':
         form = DocumentCompareForm(request.POST, request.FILES)
@@ -37,6 +37,7 @@ def compare_documents(request):
 
             context.update(
                 {
+                    'comparison_done': True,
                     'left_file_name': left_file.name,
                     'right_file_name': right_file.name,
                     'left_stats': left_stats,
